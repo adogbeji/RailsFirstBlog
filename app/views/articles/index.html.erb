@@ -1,6 +1,7 @@
 <h1>Index Page</h1>
 
 <% @articles.each do | article | %>
+   <a href="/articles/<%= article.id %>">
    <strong><%= article.title %></strong>
    <p><%= article.content %></p>
 <% end %>
