@@ -1,7 +1,7 @@
 <h1>Index Page</h1>
 
 <% @articles.each do | article | %>
-   <a href="/articles/<%= article.id %>">
    <strong><%= article.title %></strong>
    <p><%= article.content %></p>
+   <%= link_to 'Show', article_path(article.id) %>
 <% end %>
