@@ -12,12 +12,19 @@ class ArticlesController < ApplicationController
     end
     
     def create
-        @article = Article.new
+        @article = Article.new(articles_params)
         
         if @article.save
             redirect_to articles_path
         else
             render :new
         end
+    end
+    
+    
+    private
+    
+    def articles_params
+        params.require(:article).permit(:title, :content)
     end
 end
