@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   get '/articles/:id', to: 'articles#show', as: :article
   patch '/articles/:id', to: 'articles#update'
   get '/articles/:id/edit', to: 'articles#edit'
+  delete '/articles/:id', to: 'articles#destroy'
   # get '/articles/new', to: 'articles#new'
 end
