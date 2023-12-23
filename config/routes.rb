@@ -11,12 +11,14 @@ Rails.application.routes.draw do
   
   root 'articles#index'
   
-  get '/articles', to: 'articles#index'
-  post '/articles', to: 'articles#create'
-  get '/articles/new', to: 'articles#new'
-  get '/articles/:id', to: 'articles#show', as: :article
-  patch '/articles/:id', to: 'articles#update'
-  get '/articles/:id/edit', to: 'articles#edit'
-  delete '/articles/:id', to: 'articles#destroy'
+  resources :articles
+  
+  # get '/articles', to: 'articles#index'
+  # post '/articles', to: 'articles#create'
   # get '/articles/new', to: 'articles#new'
+  # get '/articles/:id', to: 'articles#show', as: :article
+  # patch '/articles/:id', to: 'articles#update'
+  # get '/articles/:id/edit', to: 'articles#edit'
+  # delete '/articles/:id', to: 'articles#destroy'
+  # # get '/articles/new', to: 'articles#new'
 end
